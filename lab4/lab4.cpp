@@ -23,7 +23,7 @@ int main() {
     cents = cents%1;
     
     cout<< "You have deposited "<< quarter <<" quarters, "<< dime << " dimes, "<< nickel << " nickels, "<< " and "<< pennie << " pennies."<< endl;
-    cout<< "    The amount of money you will recieve is: $"<<(quarter*25+dime*10+nickel*5+pennie*1)/100.00- .0109* (quarter*25+dime*10+nickel*5+pennie*1)/100.00;
+    cout<< "    The amount deposited: $"<< (quarter*25+dime*10+nickel*5+pennie*1)/100.00<<" After fee: $"<< (quarter*25+dime*10+nickel*5+pennie*1)/100.00- .109* (quarter*25+dime*10+nickel*5+pennie*1)/100.00;
 
     
 }

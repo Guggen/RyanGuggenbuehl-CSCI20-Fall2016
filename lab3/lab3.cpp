@@ -9,8 +9,7 @@ int main() {
    char favNum = 0;
    float decNum = 0;
 
-   cout << "Enter your name: ";
-  cin >> userName; 
+   sss
    cout << "Enter your age: ";
    cin >> userAge;
    cout << "Enter your favorite color: ";
