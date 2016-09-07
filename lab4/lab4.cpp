@@ -8,8 +8,8 @@ int main() {
     int dime = 0;
     int nickel = 0;
     int pennie = 0;
-    cout<< "You will be charged 10.9% fee from the amount of money deposited."<< endl;
-    cout << "   Deposited amount of money amount: ¢";
+    cout<< "You will be charged 10.9% fee from the amount deposited."<< endl;
+    cout << "   Deposited amount of money: ¢";
     cin >> cents; 
     
     
