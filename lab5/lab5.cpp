@@ -34,7 +34,7 @@ struct MonsterThree{
 
 
 int main () {
-    MonsterOne monster1;
+    MonsterOne monster1; //User input needed.
     
     
     MonsterTwo monster2;
