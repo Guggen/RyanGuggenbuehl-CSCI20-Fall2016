@@ -77,7 +77,7 @@ void DistanceConverter::SetDistanceFromInches(double inches){
 }
 double DistanceConverter::GetDistanceAsInches(){
     
-    return miles_* 63360;
+    return miles_ * 63360;
 }
 
 
