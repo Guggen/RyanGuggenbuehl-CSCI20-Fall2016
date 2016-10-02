@@ -1,9 +1,14 @@
+//Created by: Ryan Guggenbuehl 
+//Created on: 9/29/16
+//Distance Conversion programm
+
+
 #include <iostream>
 #include <string>
 #include <math.h>
 using namespace std;
 
-class DistanceConverter {
+class DistanceConverter { //Class for all the functions that will be used for each unit conversion
 public:
     void SetDistanceFromMiles(double miles);
     double GetDistanceFromMiles();
@@ -30,11 +35,11 @@ private:
     
 };
 
-DistanceConverter::DistanceConverter(){
+DistanceConverter::DistanceConverter(){//Default constructor for when no value is inputed
      miles_ = 0;
      return;
 }
-DistanceConverter::DistanceConverter(double inputDist){
+DistanceConverter::DistanceConverter(double inputDist){//Overloaded Constructer accepts an inputed value
     miles_ = inputDist;
     return;
 }
@@ -47,7 +52,7 @@ double DistanceConverter::GetDistanceFromMiles(){
     return miles_;
 }
 
-void DistanceConverter::SetDistanceFromYards(double yards){//FIx
+void DistanceConverter::SetDistanceFromYards(double yards){//Yards conversion equations
     miles_ = yards  / 1760;
     return;
 }
@@ -56,7 +61,7 @@ double DistanceConverter::GetDistanceAsYards(){
     return miles_*1760;
 }
 
-void DistanceConverter::SetDistanceFromMeters(double meters){
+void DistanceConverter::SetDistanceFromMeters(double meters){//Meters conversion equations
     miles_ = meters / 1609.34;
 }
 double DistanceConverter::GetDistanceAsMeters(){
@@ -64,7 +69,7 @@ double DistanceConverter::GetDistanceAsMeters(){
     return miles_*1609.34;
 }
 
-void DistanceConverter::SetDistanceFromFeet(double feet){
+void DistanceConverter::SetDistanceFromFeet(double feet){//Feet conversion equations
     miles_ = feet / 5280;
 }
 double DistanceConverter::GetDistanceAsFeet(){
@@ -72,7 +77,7 @@ double DistanceConverter::GetDistanceAsFeet(){
     return miles_* 5280;
 }
 
-void DistanceConverter::SetDistanceFromInches(double inches){
+void DistanceConverter::SetDistanceFromInches(double inches){//Inches conversion equations
     miles_ = inches / 63360;
 }
 double DistanceConverter::GetDistanceAsInches(){
@@ -82,7 +87,7 @@ double DistanceConverter::GetDistanceAsInches(){
 
 
 
-void DistanceConverter::PrintDist() {
+void DistanceConverter::PrintDist() {//Output function for when conversions are computed
     cout << "Distance in Miles: " << GetDistanceFromMiles() << endl;
     cout << "Distance in Yards: " << GetDistanceAsYards() << endl;
     cout << "Distance in Meters: " << GetDistanceAsMeters() << endl;
@@ -95,32 +100,35 @@ void DistanceConverter::PrintDist() {
 
 int main ()
 {
+    int number = rand()%300 + 1;
     DistanceConverter dist1; //testing default constructor
-    DistanceConverter dist2(274); //testing overloaded constructor
+    DistanceConverter dist2(number); //testing overloaded constructor
     
+    cout<<"Distance Converter test with no input: 0 "<< endl;
     dist1.PrintDist();
+    cout<<"Distance Converter test with random input: "<< number<< endl;
     dist2.PrintDist();
     
     dist1.SetDistanceFromMiles(1); //testing mutator function
-    cout<<dist1.GetDistanceFromMiles()<<endl;//testing accessor function
+    cout<<"Miles: " << dist1.GetDistanceFromMiles()<<endl;
     dist1.PrintDist();
     
     
     
-    dist2.SetDistanceFromMeters(16);
-    cout<<dist2.GetDistanceAsMeters()<<endl;
+    dist2.SetDistanceFromMeters(16);//Meter unit input
+    cout<<"Meters: " << dist2.GetDistanceAsMeters()<<endl;
     dist2.PrintDist();
     
-    dist2.SetDistanceFromYards(20); //testing other functions
-    cout<<dist2.GetDistanceAsYards()<<endl;
+    dist2.SetDistanceFromYards(20); //Yard unit input
+    cout<<"Yards: " << dist2.GetDistanceAsYards()<<endl;
     dist2.PrintDist();
     
-    dist2.SetDistanceFromInches(100); //testing other functions
-    cout<<dist2.GetDistanceAsMeters()<<endl;
+    dist2.SetDistanceFromInches(100); //Inches unit input
+    cout<<"Inches: " << dist2.GetDistanceAsMeters()<<endl;
     dist2.PrintDist();
     
-    dist2.SetDistanceFromMeters(1);
-    cout<<dist2.GetDistanceAsMeters()<<endl;
+    dist2.SetDistanceFromMeters(1); //Meter unit input
+    cout<<"Meters: " << dist2.GetDistanceAsMeters()<<endl;
     dist2.PrintDist();
     
     return 0;
