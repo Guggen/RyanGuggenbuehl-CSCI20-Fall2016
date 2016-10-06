@@ -1,3 +1,8 @@
+//Created by Ryan Guggenbuehl
+//Created on 9/4/16
+//Tax Program
+
+
 #include <iostream>
 #include <string>
 #include <math.h>
@@ -13,8 +18,6 @@ int main(){
     double taxRefund = 0;
     double taxDue = 0;
     
-    double interest = 0;
-    string unemployment = "";
     
     
     
@@ -64,7 +67,7 @@ int main(){
                 taxOwed = 4991.25 + (grossWages-36250)* .25;
             }
             if ( 97851 <= grossWages){
-                taxOwed = 17891.25 + (grossWages-8926)* .28;
+                taxOwed = 17891.25 + (grossWages-87850)* .28;
             }
         }
         else{
@@ -73,28 +76,20 @@ int main(){
         
     }
     
-    if (taxOwed - taxWithheld > 0){
+    if (taxOwed - taxWithheld > 0){         //Taxes Due
         taxDue = taxOwed - taxWithheld;
         taxRefund = 0;
     }
     
-    else { 
+    else {                                  //Taxes Refunded
         taxRefund = taxWithheld-taxOwed;
         taxDue = 0;
     }
     
     
-   
-    
     cout << "Name: " << name << endl 
          << "Total tax owed: $" << taxDue  << endl
-         << name <<" is entitled to a REFUND of $"<<  taxRefund   << endl;
-    
-    
-    
-    
-    
-    
+         << name <<" is entitled to a REFUND of: $"<<  taxRefund   << endl;
     
     return 0;
     
