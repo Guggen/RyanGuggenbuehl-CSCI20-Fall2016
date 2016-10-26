@@ -10,13 +10,39 @@
 #include <time.h>
 using namespace std;
 
+class RockPaperScissors {
+public:
+
+
+    
+    void SetGameCount(int gameAmmount);
+    int GetWinCount();
+    
+private:
+    int gameCount_;
+};
+
+
+
+RockPaperScissors::RockPaperScissors(){
+ gameCount_ = 0;
+ return;
+}
+RockPaperScissors::RockPaperScissors(gameAmmount){
+    gameCount_ = gameAmmount;
+    return;
+}
+
+
 
 int main(){
+    
+    
     
     int winCount = 0;//Variables used throughout program
     int loseCount = 0;
     int tieCount = 0;
-    int gameAmmount = 0;
+    /*int gameCount = 0;*/
     int win = 0;
     int lost = 0;
     int userNum = 0;
@@ -31,9 +57,10 @@ int main(){
     
     
     cout << "How many games would you like to play, best out of 3, 5, or 7? If game is tied another game is played: " << endl; // Output/Input for game ammount
-    cin >> gameAmmount;
     
-   
+    
+    RockPaperScissors game1;
+    RockPaperScissors game2(cin >> gameAmmount);
     
     while(win <=winCount || lost  <= loseCount){//This loops repeats the game until the win or lost count is met.
     
