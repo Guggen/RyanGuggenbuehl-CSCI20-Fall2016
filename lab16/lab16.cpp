@@ -39,7 +39,7 @@ int main(){
         << "To end order type: 99" << endl;
         cin >> i;
         
-    while(i>0 && i<10){//Loop that allows you to continue ordering until you're done.
+    //Loop that allows you to continue ordering until you're done.
             
             amount[i-1]=foodNum-1;
             sumCost = sumCost + cost[i-1];
