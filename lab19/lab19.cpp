@@ -15,6 +15,7 @@ int main(){
     int i = 0;
     int j = 0;
     int sum = 0;
+    int sum2 = 0;
 
     inFS.open("textInput.txt");
     outFS.open("textOutput.txt");
@@ -27,12 +28,12 @@ int main(){
 
    
 
-    for(i = 0; i < 3; ++i){
+    for(i = 0; i < 3; ++i){//Loop that sums the rows up.
         for(j = 0; j < 4; ++j){
         
         
-        inFS >> numbers[i][j];
-        outFS <<setw(3) << left<<  numbers[i][j];
+        inFS >> numbers[i][j];//Reads input file.
+        outFS <<setw(3) << left<<  numbers[i][j];//Outputs input numbers.
         sum = sum + numbers[i][j];
         
         }
@@ -44,8 +45,13 @@ int main(){
     }
     
     
-   for(j = 0; j < 4; ++j){
-       outFS << setw(3) << left<< numbers[0][j]+numbers[1][j]+numbers[2][j];
+   for(j = 0; j < 4; ++j){//Loop that runs that sums the colums up.
+       for(i = 0; i < 3; ++i){
+           sum2 = sum2 + numbers[i][j];
+      
+       }
+       outFS << setw(3) << left << sum2;
+        sum2 = 0;
    }
    
  
