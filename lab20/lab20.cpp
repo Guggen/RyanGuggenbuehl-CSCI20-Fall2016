@@ -23,7 +23,7 @@ int main()
                 }
                 else
                 {
-                                cout << "WARNING WORD TOO BIG TO DISPLAY!!" << endl;  //If word is too large then its rejected.
+                                cout << "WARNING WORD TOO BIG TO DISPLAY!!" << endl;//If word is too large then its rejected.
                 }
                 cout << endl;
                 tail = &firststr[strlen(firststr) - 1]; //Assings the tail to the memory location of the 2nd to last character.
@@ -40,7 +40,7 @@ int main()
                 tail = &firststr[strlen(firststr) - 1];   //Assings the tail to the memory location of the 2nd to last character.
                 head++;
                 tail--;
-                if (*head == *tail)
+                if (*head == *tail)//ww
                 {
                                 cout << "It is an palindrome!" << endl;  //Compares tail to head, if equal its a palindrome.
                 }
