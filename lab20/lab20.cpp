@@ -40,7 +40,7 @@ int main()
                 tail = &firststr[strlen(firststr) - 1];   //Assings the tail to the memory location of the 2nd to last character.
                 head++;
                 tail--;
-                if (*head == *tail)//ww
+                if (*head == *tail)
                 {
                                 cout << "It is an palindrome!" << endl;  //Compares tail to head, if equal its a palindrome.
                 }
