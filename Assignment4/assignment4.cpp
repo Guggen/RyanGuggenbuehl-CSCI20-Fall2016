@@ -37,9 +37,10 @@ int main(){
     int count = 1;
     
     
+    cout << "Enter name of file: " << endl;
+    cin >> fileName;
     
-    
-    inFS.open("muffet.txt");
+    inFS.open(fileName);
     outFS.open("output.txt");
     
     do      //if not at end of file, continue reading numbers
