@@ -37,13 +37,13 @@ int main(){
     int count = 1;
     
     
-    cout << "Enter name of file: " << endl;
+    cout << "Enter name of file: " << endl; // File name input
     cin >> fileName;
     
-    inFS.open(fileName);
-    outFS.open("output.txt");
+    inFS.open(fileName); // Opens file
+    outFS.open("output.txt"); // outputs file changes
     
-    do      //if not at end of file, continue reading numbers
+    do      // Loop that reads words until it reaches the last word.
      {      
             
             getline(inFS, textF);
@@ -55,7 +55,7 @@ int main(){
      
      
        
-   for( i = 0; i < text2.length(); ++i){
+   for( i = 0; i < text2.length(); ++i){//Loop that scans read words and removes commas
        if(text2.at(i)==','){
            text2.at(i)=' ';
        }
@@ -87,7 +87,7 @@ int main(){
     }
     
     
-    /*for(i=0; i < 50; ++i){
+    /*for(i=0; i < 50; ++i){ // Loop that counts word occurance.
        for(k=0; k < 50; ++k){
            if(wordsText[i] == words[k]){
             count = count + 1;
